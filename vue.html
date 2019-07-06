@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="./vue.2.0.js"></script>
+	</head>
+	<body>
+	<input type="button" id="username" value="查询姓名" onclick="chaxun(xinxi.name)"/>
+	<input type="button" id="usersex" value="查询性别" onclick="chaxun(xinxi.sex)"/>
+	<input type="button" id="userage" value="查询年龄" onclick="chaxun(xinxi.age)" />
+	<br />
+	<div id="ca">
+		
+	</div>
+		<script>
+			
+			var xinxi={
+				name:'林滋剑',
+				sex:'男',
+				age:'21',
+				aihao:'篮球',
+				dizhi:'浙江舟山',
+			}
+			function chaxun(call){
+				var ca=document.getElementById("ca");
+				ca.innerHTML=call;
+			}
+			
+			
+			
+		/*	var vm = new Vue({
+				el:#app;
+				data{
+					"在里面定义内容属性"
+				}
+				methods{
+					"在里面定义事件操作"
+				}
+			})
+			*/
+		   //if 嵌套
+		   /*var name="林滋剑" , age=19, sex="男";
+		   if (name=="林滋剑") {
+			   document.write("欢迎你，林滋剑！");
+			   if (age>18) {
+			   	document.write("</br>成年啦！");
+				if (sex=="男") {
+					document.write("小帅哥！");
+				} else{
+					document.write("小美女！");
+				}
+			   } else{
+			   	document.watch("未成年");
+				if (sex=="男") {
+					document.write("小帅哥！");
+				} else{
+					document.write("小美女！");
+				}
+			   }
+		   	
+		   }
+		   //0~100 奇数之和
+		   var jishu = 0;
+		   for (var i = 1; i<100 ; i+=2) {
+		   	jishu+=i;
+		   }
+		   document.write(jishu);
+		   //0~100 偶数之和
+		   var oushu = 0;
+		   for (var i = 2; i<=100 ; i+=2) {
+		   	oushu+=i;
+		   }
+		   document.write("<hr color='red'");
+		   document.write("<br>");
+		   document.write(oushu);
+		   document.write("<hr color='red'");
+		   document.write("<br>");
+		  //0~100之和
+		  		   var he = 0;
+		  for (var i = 1; i<=100 ; i++) {
+		  	he+=i;
+		  }
+		  document.write(he);
+		  function number_fan(){
+			  var sun = document.getElementById("uu").value;
+			  
+			  var sun1 = parseInt(sun /100 );
+			  
+			  var sun2 = parseInt(sun /10 %10);
+			  var sun3 = parseInt(sun %10 );
+			  //document.write(sun3,sun2,sun1);
+			  //alert(sun3+""+sun2+""+sun1)
+			  //var run = document.getElementById("xx").innerHTML;
+			  var run= document.getElementById("xx");
+			  run.innerHTML=""sun3+sun2+sun1;
+			  //run.innerHTML=sun3,sun2,sun1;
+		  }
+
+//
+
+for (var i=0;i<=20;i++) {
+	for (var j=0;j<=33;j++) {
+		for (var z=0;z<=100;z++) {
+			if ((i+j+z==100)&&(i*5+j*3+z/3==100)) {
+				document.write("公鸡:"+i+"母鸡:"+j+"小鸡:"+z+"<hr/>");
+			}
+		}
+		
+	}
+	
+}
+  
+  function lin(x,y){
+	  return x()+y();
+  }
+function text1(){
+	return 5;
+}
+function text2(){
+	return 6;
+}
+alert(lin(text1,text2))
+*/
+
+		</script>
+	</body>
+</html>
