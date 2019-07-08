@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		div{
+			background-color: aqua;
+		}
+		.red{
+			color: red;
+		}
+	</style>
+	</head>
+	<body>
+		<input type="text" name="ads" id="dd" value="hello" />
+		<button type="button">click this</button>
+		<div id="d" class="5">
+			erer
+		</div>
+		<h2 class="111" id="2">some</h2>
+		<h3 class="333" id="3">all good</h3>
+		<li>adasd</li>
+		
+		<script type="text/javascript">
+		$(document).ready(function () {
+				$('button').on('click', function(){
+					//$('.5').append($('.333'))  将class为333的元素换位到clss为5的元素的最后一个子元素的下面
+					//$('.5').prepend($('.333')) 将class为333的元素换位到clss为5的元素的最后一个子元素的上面
+					//$('.5').after($('.333'))   将class为333的元素换位到clss为5的元素的下面
+					//$('.5').before($('.333'))  将class为333的元素换位到clss为5的元素的上面
+					//$('.5').remove()           删除整个元素
+					//$('.5').empty()            清空整个元素
+					//$('.333').wrap('<hr/>')      添加加标签
+					//$('li').wrapInner('<b></b>')  在内容里添加元素
+					//$('li').replaceWith('hello world') 更改元素中的文本内容  内容在后
+					$('.5').before($('.111')); //  元素进行移动换位
+				});
+			})
+			
+			
+		</script>
+	</body> 
+</html>
