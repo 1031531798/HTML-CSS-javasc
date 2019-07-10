@@ -39,8 +39,14 @@
 // 	alert('hello') //键盘抬起触发事件
 // });
 //  })
-$(document).ready(function () {
-	$('#dd').on('change', function(){			
-	alert('hello') //检查某个值改变触发事件
-});
-})
+// $(document).ready(function () {
+// 	$('#dd').on('change', function(){			
+// 	alert('hello') //检查某个值A改变触发事件
+// });
+// })
+// $(document).ready(function () {
+// 	$('#she').on('dblclick', function(){			
+// 	alert('hello') //双击触发事件
+// });
+// })
+
