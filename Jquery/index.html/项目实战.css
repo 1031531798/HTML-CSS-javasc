@@ -1,0 +1,79 @@
+.cl{
+	width: 200px;
+	height: 200px;
+	border:1px solid darkgray;
+	border-radius:10px ;
+	background-color: antiquewhite;
+	float: left;
+	margin: 5px;
+}
+.jx{
+	width: 200px;
+	height: 200px;
+	border:1px solid darkgray;
+	border-radius:10px ;
+	background-color: antiquewhite;
+	float: left;
+	margin: 5px
+}
+.wc{
+	width: 200px;
+	height: 200px;
+	border:1px solid darkgray;
+	border-radius:10px ;
+	background-color: antiquewhite;
+	float: left;
+	margin: 5px
+}
+.tj{
+	width: 200px;
+	height: 300px;
+	border:1px solid darkgray;
+	border-radius:10px ;
+	background-color: antiquewhite;
+	float: left;
+	margin: 5px
+}
+.bt{
+	width: 180px;
+	height: 25px;
+	position: relative;
+	left: 10px;
+	top: 20px;
+}
+.nr{
+	width: 180px;
+	height: 25px;
+	position: relative;
+	left: 10px;
+	top: 21px;
+}
+.rq{
+	width: 180px;
+	height: 20px;
+	position: relative;
+	left: 10px;
+	top: 21px;
+}
+.tjxm{
+	width: 100px;
+	height: 20px;
+	position: relative;
+	left: 10px;
+	top: 25px;
+}
+	
+.qk{
+	width: 100px;
+	height: 20px;	position: relative;
+	left: 10px;
+	top: 30px;
+}
+.tzsc{
+	width: 180px;
+	height: 90px;
+	position: relative;
+	left: 5px;
+	top: 40px;
+	border: 3px dashed;
+}

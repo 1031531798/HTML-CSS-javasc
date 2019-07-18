@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax API</title>
+		<script src="jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<div id="2" class="div">
+			222
+		</div>
+		<button type="button" class="but">点击获取</button>
+		<script type="text/javascript">
+			
+		// $(document).ready(function(){
+		// 	$('.but').on('click',function(){
+		// 		var newload ="ass.html"
+		// 		
+		// 		$('.div').load(newload + ' #321',null,function(){
+		// 			alert('!')
+		// 		});              //load 操作
+		// 	
+		// 		                     
+		// 	})
+		// 	
+		// })
+		// $(document).ready(function(){
+		// 	$('.but').on('click',function(){
+		// 		var newload ="ass.html"
+		// 		
+		// 		$.get(newload,{name:'lzj',age:'18'},function(data,text){
+		// 			alert(text)
+		// 			alert(data)
+		// 		})
+		// 								//get 操作
+		// 	
+		// 		                     
+		// 	})
+		// 	
+		// })
+				$(document).ready(function(){
+			$('.but').on('click',function(){
+				var newload ="text2.html"
+				$.ajax({url:'ass2.html',success:function(data,textStatus){
+					debugger;
+				},
+				error:function(xhr,status,errorThrown){
+					debugger
+				}
+				})
+										//get 操作
+			
+				                     
+			})
+			
+		})
+
+		</script>
+	</body>
+</html>
