@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简易计算器</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="" id="number" v-model="n1" @input="count" />
+			<select id="22" v-model="opt" @change="count3">
+				<option value ="+">+</option>
+				<option value ="-">-</option>
+				<option value ="*">*</option>
+				<option value ="/">/</option>
+			</select>
+			<input type="text" name="" id="number2" v-model="n2" @input="count2" />
+			=
+			<input type="text" v-model="result" />
+				
+			</span>
+		</div>
+		
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		var vm=new Vue({
+			el:"#app",
+			data:{
+				n1:0,
+				n2:0,
+				opt:"+",
+				result:"",
+			},
+			methods:{
+				count(){
+					switch(this.opt){
+						case "+" :this.result=parseInt(this.n1) + parseInt(this.n2)
+						break;
+						case "-" :this.result=parseInt(this.n1) - parseInt(this.n2)
+						break;
+						case "*" :this.result=parseInt(this.n1) * parseInt(this.n2)
+						break;
+						case "/" :this.result=parseInt(this.n1) / parseInt(this.n2)
+						break;
+					}
+					
+				},
+				
+				count2(){
+					switch(this.opt){
+						case "+" :this.result=parseInt(this.n1) + parseInt(this.n2)
+						break;
+						case "-" :this.result=parseInt(this.n1) - parseInt(this.n2)
+						break;
+						case "*" :this.result=parseInt(this.n1) * parseInt(this.n2)
+						break;
+						case "/" :this.result=parseInt(this.n1) / parseInt(this.n2)
+						break;
+					}
+					
+				},
+				
+				count3(){
+					switch(this.opt){
+						case "+" :this.result=parseInt(this.n1) + parseInt(this.n2)
+						break;
+						case "-" :this.result=parseInt(this.n1) - parseInt(this.n2)
+						break;
+						case "*" :this.result=parseInt(this.n1) * parseInt(this.n2)
+						break;
+						case "/" :this.result=parseInt(this.n1) / parseInt(this.n2)
+						break;
+					}
+					
+				}
+
+			}
+			
+			
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" @click="dong" value="动起来"/>
+			<input type="button" @click="undong" value="停止跑动"/>
+			<h3>{{msg}}</h3>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		 var ve=new Vue({
+			 el:"#app",
+			 data:{
+				 msg:"感谢皇冠用户送的100个宇宙飞船~~",
+				 // timerInterval=null
+			 },
+			 methods:{
+				 dong(){
+					 this.timerInterval=setInterval(()=>{
+						 var st=this.msg.substring(0,1);
+						 var ed=this.msg.substring(1);
+						 this.msg=ed + st;
+					 },300);
+				 },
+				 
+				 undong(){
+					 clearInterval(this.timerInterval)
+				 },
+			 },
+		 })
+	</script>
+</html>

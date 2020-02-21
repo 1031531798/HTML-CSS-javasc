@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>User Note</title>
+	<link rel="stylesheet" href="frame/bootstrap.min.css">
+	<link rel="stylesheet" href="text-game.css">
+</head>
+<body>
+	<div id="frame">
+		<div id="show">
+			
+		</div>
+		<div id="control">
+			<button v-if="start" class="btn btn-primary" id="start" @click="onStart">开始游戏</button>
+			<div id="btn" v-if="two">
+				<button class="btn btn-primary" id="left">{{btnLeft}}</button>
+				<button class="btn btn-primary" id="right">{{btnRight}}</button>
+			</div>
+			<form id="int" v-if="one">
+				<p>怎么称呼你？</p>
+				<input type="text" class="form-control" v-model="name"></input>
+				<p>你的性别是？</p>
+				<input type="radio" name="sex" value="男" v-model="sex" checked="checked">男</input>
+				<input type="radio" name="sex" value="女" v-model="sex">女</input>
+				<p>请选择你的职业</p>
+				<select v-model="job">
+					<option value="战士" selected>战士</option>
+					<option value="射手">射手</option>
+					<option value="猎人">猎人</option>
+				</select>
+				<button type="button" class="btn btn-primary btn-sm" id="set" @click="okUser">确认创建</button>
+			</form>
+		</div>
+		<div id="text">
+			{{statement}}
+		</div>
+	</div>
+	<footer>
+		<script src="frame/jquery-3.4.1.min.js"></script>
+		<script src="frame/bootstrap.min.js"></script>
+		<script src="frame/vue.js"></script>
+		<script src="text-game.js"></script>
+	</footer>
+</body>
+ </html>

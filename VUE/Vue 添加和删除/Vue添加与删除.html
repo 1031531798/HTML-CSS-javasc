@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>User Note</title>
+	<link rel="stylesheet" href="frame/bootstrap.min.css">
+	<link rel="stylesheet" href="note.css">
+</head>
+<body>
+	<div id="note">
+		<h1>Things I need to do</h1>
+		<div id="write">
+			<label for="content">内容：</label>
+			<input class="form-control" id="content" v-model="noteContent">
+			<button type="submit" class="btn btn-primary btn-lg" id="sumbit" @click="save">保存</button>
+		</div>
+		<div>
+			<table class="table table-bordered table-striped" id="note_table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>时间</th>
+						<th>内容</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody v-for="(value,index) in noteContentArr">
+					<tr>
+						<td>{{value.id}}</td>
+						<td>{{value.time}}</td>
+						<td>{{value.content}}</td>
+						<td>未完成</td>
+						<td><a @click="ok" class="cc">完成任务</a> &emsp; &emsp;<a @click="del" class="cc">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer>
+		<script src="frame/jquery-3.4.1.min.js"></script>
+		<script src="frame/bootstrap.min.js"></script>
+		<script src="frame/vue.js"></script>
+		<script src="note2.js"></script>
+	</footer>
+</body>
+ </html>

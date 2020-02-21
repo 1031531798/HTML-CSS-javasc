@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格隔行换色</title>
+		<script>
+//			1.确定事件:
+//			2事件要触发函数:
+//			3.函数需要进行操作:
+			function init(){
+				var tab =document.getElementById("tab1");
+				var row =tab1.rows;
+				//alert(row.length);
+				for(var i=0;i<row.length;i++){
+					var row1 =row[i];
+					if (i%2==0) {
+						row1.bgColor="yellow";
+					} else{
+						row1.bgColor="red";
+					}
+				}
+				}
+				
+				function copyText(){
+					//获取对象
+					var diyige =document.getElementById("ch")
+					//获取对象状态
+					var zhuangtai=diyige.checked;
+					//改变内容
+					var houjige =document.getElementsByTagName("input");
+					//alert(houjige.length)
+					for(var i=1 ;i<houjige.length;i++) {
+						var gaineirong =houjige[i];
+						gaineirong.checked = checked;
+						}
+					} 
+		</script>
+	</head>
+	<body onload= "init()">
+		<table border="1px" id="tab1">
+			<tr>
+				<td>
+					<input type="checkbox" onclick="copyText()" id="ch"/>
+					</td>
+				<td>分类ID</td>
+				<td>分类名称</td>
+				<td>分类商品</td>
+				<td>分类描述</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="cx1"/></td>
+				<td>1</td>
+				<td>笔记本电脑</td>
+				<td>苹果，三星，华硕</td>
+				<td>高端品牌</td>
+				<td><a href="#">修改</a>|<a href="#">删除</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="cx1"/></td>
+				<td>2</td>
+				<td>主机	</td>
+				<td>PS4,XBOX,SW</td>
+				<td>擅长单机游戏</td>
+				<td><a href="#">修改</a>|<a href="#">删除</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="cx1"/></td>
+				<td>3</td>
+				<td>衣服</td>
+				<td>耐克，阿迪达斯，李宁</td>
+				<td>运动装备，紧身衣，速干服</td>
+				<td><a href="#">修改</a>|<a href="#">删除</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="cx1"/></td>
+				<td>4</td>
+				<td>食品</td>
+				<td>牛奶，面包</td>
+				<td>口味纯正，人人爱吃</td>
+				<td><a href="#">修改</a>|<a href="#">删除</a></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"name="cx1"/></td>
+				<td>5</td>
+				<td>杂货</td>
+				<td>餐巾纸，箱子，插线板</td>
+				<td>各种杂货</td>
+				<td><a href="#">修改</a>|<a href="#">删除</a></td>
+			</tr>
+		</table>
+	</body>
+</html>

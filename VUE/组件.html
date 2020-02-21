@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VUE组件</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			img{
+				width: 150px;
+				height:200px;
+			}
+			.dd{
+				width: 150px;
+				height: 200px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app" class="dd">
+			<img v-bind:src="food.imgUrl" id="aaa">
+			<text1 :tudo = "food" ></text1>
+			<text2 :tudo = "food" ></text2>
+			<price :tudo = "food"></price>
+		</div>
+		<script type="text/javascript">
+			Vue.component('text1', {
+				props:["tudo"],
+			  template: '<p>{{tudo.text1}}</p>', 
+			})
+			Vue.component('text2', {
+				props:["tudo"],
+			  template: '<p>{{tudo.text2}}</p>', 
+			})
+			Vue.component('price', {
+				props:["tudo"],
+			  template: '<p>${{tudo.price}}</p>', 
+			})
+			Vue.component('ship', {
+				props:["tudo"],
+			  template: '<div><text1 :tudo = "food" ></text1></div>', 
+			})
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					imgUrl:"img.jpg",
+					food:{
+						imgUrl:"img.jpg",
+						text1:"精美陶瓷18件套",
+						text2:"上好陶瓷，景德镇手工烧制，家居必备，百年老店值得信赖",
+						price:380
+					},
+					food2:{
+						imgUrl:"img.jpg",
+						text1:"富国牌夜光杯",
+						text2:"正品出售，百年老店，祖传自乾隆皇庭",
+						price:800
+					}
+				},
+			})
+		</script>
+	</body>
+</html>

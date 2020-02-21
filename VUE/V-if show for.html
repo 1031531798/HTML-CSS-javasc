@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+<!-- 			<div v-if="panduan">
+				{{msg}}
+			</div>
+			<div v-else>
+				{{msg2}}
+			</div>
+			<div v-show="panduan">
+				{{show1}}
+			</div>
+			<input type="button" @click="sw()" value="点击切换" /> -->
+			<ul >
+				<li  v-for="(itt,idx) in arr">
+					{{idx}}
+					{{itt}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="(value,key) in obj">
+					{{key}}
+					{{value}}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="(item,idx) in obj2">
+					{{idx}}
+					{{item.name}}
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				arr:[2,4,6,8,12,23,5,2,123,22],
+				obj:{
+					name:"linzijian",
+					age:18,
+					sex:"男"
+				},
+				obj2:[
+					{
+						name:"shijiaqi",
+						age:55,
+						sex:"nn"
+					}
+				]
+					
+				
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#first{
+				position: fixed;
+				background: green;
+				width: 50px;
+				height: 50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="first">
+			<img src="../图片库/11.4.png" >
+		</div>
+		<script type="text/javascript">
+			function move(){
+				var event=event||window.event
+				var x = event.clientX;
+				var y=event.clientY;
+				var div=document.getElementById('first');
+				var x1=x+10;
+				var y1=y+10;
+				div.style.top=y1+"px";
+				div.style.left=x1+"px";
+				console.log(x)
+			}
+			document.onmousemove=move;
+			
+		</script>
+	</body>
+</html>
