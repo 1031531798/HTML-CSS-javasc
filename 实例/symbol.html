@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let obj = {
+				[Symbol('name')]:"linzijian",
+				// name:"linzijian",
+				age:"18"
+			}
+			// 使用Object的API
+			console.log(Object.getOwnPropertySymbols(obj)) // [Symbol(name)]
+			// 使用新增的反射API
+			console.log(Reflect.ownKeys(obj)) //["age", Symbol(name)]
+		</script>
+	</body>
+</html>
