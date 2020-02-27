@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>class</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class pro{
+				constructor(name,age,sex,job) {
+				    this.name = name;
+					this.age = age;
+					this.sex = sex;
+					this.job = job;
+				}
+				show(text){
+					console.log(text + "," + this.name)
+				}
+			}
+			let lin = new pro("linzijian",22,"男","web前端");
+			let dong = new pro("dongbiyao",21,"男","设计员");
+			console.log(lin)//{name: "linzijian", age: 22, sex: "男", job: "web前端"}
+			console.log(dong)//{name: "dongbiyao", age: 21, sex: "男", job: "设计员"}
+			lin.show("good");//good,linzijian
+			dong.show("hellow");//hellow,dongbiyao
+			class book extends pro{
+				constructor(name,price){
+					super();
+					this.name = name;
+					this.price = price;
+				}
+			}
+			let books = new book("锋利的jQuery",80)
+			console.log(books.age)//undefined
+			books.show("nice")// nice,锋利的jQuery
+		</script>
+	</body>
+</html>
