@@ -6,8 +6,21 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			const book = 300;
-			book = 120; //报错
+			let作用域
+			var arr = [];
+			for(var i = 0;i < 10;i++){
+				arr[i] = function(){
+					console.log(i)
+				}
+			}
+			arr[3]()// 10
+			var arr2 = [];
+			for(let i = 0;i < 10;i++){
+				arr2[i] = function(){
+					console.log(i)
+				}
+			}
+			arr2[3]()// 3
 		</script>
 	</body>
 </html>

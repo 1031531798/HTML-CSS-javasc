@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>text game</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>User Note</title>
+	<link rel="stylesheet" href="frame/bootstrap.min.css">
 	<link rel="stylesheet" href="text-game.css">
 </head>
 <body>
 	<div id="frame">
 		<div id="show">
-			
+			<button class="btn btn-primary" id="look-attr" @click="attr" v-if="userAttr">个人信息</button><br>
+			<div id="attr-list" v-if="userAttrList">
+				你的名称：<b>{{name}}</b><br>
+				你的职业：<b>{{job}}</b><br>
+				你的HP：<b>{{user.HP}}</b><br>
+				你的力量：<b>{{user.力量}}</b><br>
+				你的防御：<b>{{user.防御}}</b><br>
+				你的敏捷：<b>{{user.敏捷}}</b><br>
+			</div>
 		</div>
-		<div id="control">
+		<div id="control" v-show="showText">
 			<button v-if="start" class="btn btn-primary" id="start" @click="onStart">{{center}}</button>
 			<div id="btn" v-if="two">
 				<button class="btn btn-primary" id="left" @click="btnL">{{btnLeft}}</button>
@@ -39,9 +47,9 @@
 		</div>
 	</div>
 	<footer>
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="frame/jquery-3.4.1.min.js"></script>
+		<script src="frame/bootstrap.min.js"></script>
+		<script src="frame/vue.js"></script>
 		<script src="text-game.js"></script>
 	</footer>
 </body>
